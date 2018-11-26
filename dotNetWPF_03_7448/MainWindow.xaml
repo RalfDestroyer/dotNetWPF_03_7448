@@ -11,13 +11,16 @@
             <RowDefinition Height="80*"/>
             <RowDefinition Height="20*"/>
         </Grid.RowDefinitions>
-        <Grid Name="printerGrid">
+        <Grid Name="printersGrid">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
+            <local:MyUserControl Grid.Column="0"/>
+            <local:MyUserControl Grid.Column="1"/>
+            <local:MyUserControl Grid.Column="2"/>
         </Grid>
-        <Button x:Name="printButton" Content="Print" FontSize="36"  HorizontalAlignment="Center" Margin="10" Grid.Row="1" VerticalAlignment="Top" Width="86"/>
+        <Button x:Name="printButton" Content="Print" FontSize="36"  HorizontalAlignment="Center"  Grid.Row="1" VerticalAlignment="Center" Height="auto" Width="auto" Grid.Column="1" Click="printButton_Click"/>
     </Grid>
 </Window>
